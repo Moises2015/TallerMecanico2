@@ -1,0 +1,46 @@
+<%= form_for(@ficha) do |f| %>
+  <% if @ficha.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ficha.errors.count, "error") %> prohibited this ficha from being saved:</h2>
+
+      <ul>
+      <% @ficha.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :numeroficha %><br>
+    <%= f.text_field :numeroficha %>
+  </div>
+  <div class="field">
+    <%= f.label :falla %><br>
+    <%= f.text_field :falla %>
+  </div>
+  <div class="field">
+    <%= f.label :diagnostico %><br>
+    <%= f.text_field :diagnostico %>
+  </div>
+  <div class="field">
+    <%= f.label :total %><br>
+    <%= f.text_field :total %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :vehiculo_id %><br>
+    <%= f.select( "vehiculo_id",Vehiculo.all.collect{|l| [l.patente, l.id]}, {include_blank: 'Seleccione Vehiculo'}) %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :cliente_id %><br>
+    <%= f.select( "cliente_id",Cliente.all.collect{|l| [l.nombre, l.id]}, {include_blank: 'Seleccione Cliente'}) %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

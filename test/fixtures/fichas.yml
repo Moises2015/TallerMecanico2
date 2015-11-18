@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  numeroficha: MyString
+  falla: MyString
+  diagnostico: MyString
+  total: MyString
+  vehiculo_id: 
+  cliente_id: 
+
+two:
+  numeroficha: MyString
+  falla: MyString
+  diagnostico: MyString
+  total: MyString
+  vehiculo_id: 
+  cliente_id: 

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Patente:</strong>
+  <%= @vehiculo.patente %>
+</p>
+
+<p>
+  <strong>Modelo:</strong>
+  <%= @vehiculo.modelo %>
+</p>
+
+<p>
+  <strong>Fabrica:</strong>
+  <%= @vehiculo.fabrica %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @vehiculo.color %>
+</p>
+
+<p>
+  <strong>Cinlidrada:</strong>
+  <%= @vehiculo.cinlidrada %>
+</p>
+
+<p>
+  <strong>Caja:</strong>
+  <%= @vehiculo.caja %>
+</p>
+
+<p>
+  <strong>Cliente:</strong>
+  <%= @vehiculo.cliente %>
+</p>
+
+<%= link_to 'Edit', edit_vehiculo_path(@vehiculo) %> |
+<%= link_to 'Back', vehiculos_path %>

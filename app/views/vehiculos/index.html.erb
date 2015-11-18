@@ -1,0 +1,37 @@
+<h1>Lista de Vehiculos</h1>
+
+<table  class = "table">
+  <thead>
+    <tr>
+      <th>Patente</th>
+      <th>Modelo</th>
+      <th>Fabrica</th>
+      <th>Color</th>
+      <th>Cinlidrada</th>
+      <th>Caja</th>
+      <th>Cliente</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vehiculos.each do |vehiculo| %>
+      <tr>
+        <td><%= vehiculo.patente %></td>
+        <td><%= vehiculo.modelo %></td>
+        <td><%= vehiculo.fabrica %></td>
+        <td><%= vehiculo.color %></td>
+        <td><%= vehiculo.cinlidrada %></td>
+        <td><%= vehiculo.caja %></td>
+        <td><%= vehiculo.cliente %></td>
+        <td><%= link_to 'Mostrar', vehiculo %></td>
+        <td><%= link_to 'Modificar', edit_vehiculo_path(vehiculo) %></td>
+        <td><%= link_to 'Eliminar',  deleted_vehiculo_path, method: :delete, data: { confirm: 'Esta Seguro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nuevo Vehiculo', new_vehiculo_path %>

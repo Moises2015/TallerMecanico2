@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Numeroficha:</strong>
+  <%= @ficha.numeroficha %>
+</p>
+
+<p>
+  <strong>Falla:</strong>
+  <%= @ficha.falla %>
+</p>
+
+<p>
+  <strong>Diagnostico:</strong>
+  <%= @ficha.diagnostico %>
+</p>
+
+<p>
+  <strong>Total:</strong>
+  <%= @ficha.total %>
+</p>
+
+<p>
+  <strong>Vehiculo:</strong>
+  <%= @ficha.vehiculo.patente %>
+</p>
+
+<p>
+  <strong>Cliente:</strong>
+  <%= @ficha.cliente.nombre %>
+</p>
+
+<%= link_to 'Edit', edit_ficha_path(@ficha) %> |
+<%= link_to 'Back', fichas_path %>

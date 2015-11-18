@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cliente:</strong>
+  <%= @cliente_vehiculo.cliente %>
+</p>
+
+<p>
+  <strong>Vehiculo:</strong>
+  <%= @cliente_vehiculo.vehiculo %>
+</p>
+
+<%= link_to 'Edit', edit_cliente_vehiculo_path(@cliente_vehiculo) %> |
+<%= link_to 'Back', cliente_vehiculos_path %>

@@ -1,0 +1,27 @@
+<h1>Lista de Clientes y Sus Vehiculos</h1>
+
+<table class = "table">
+  <thead>
+    <tr>
+      <th>Cliente</th>
+      <th>Vehiculo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cliente_vehiculos.each do |cliente_vehiculo| %>
+      <tr>
+        <td><%= cliente_vehiculo.cliente.nombre %></td>
+        <td><%= cliente_vehiculo.vehiculo.modelo %></td>
+        <td><%= link_to 'Mostrar', cliente_vehiculo %></td>
+        <td><%= link_to 'Modificar', edit_cliente_vehiculo_path(cliente_vehiculo) %></td>
+        <td><%= link_to 'Eliminar', cliente_vehiculo, method: :delete, data: { confirm: 'Esta Seguro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nueva Asociación Cliente vehiculo', new_cliente_vehiculo_path %>
